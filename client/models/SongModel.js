@@ -8,9 +8,13 @@ var SongModel = Backbone.Model.extend({
 
   enqueue: function() {
     this.trigger('enqueue', this);
+  },
+
+  dequeue: function() {
+    this.trigger('dequeue', this);
+  },
+
+  ended: function() {
+    this.trigger('ended', this);
   }
-
-  //every song would need a pointer to a collection (the song queue)
-  // dear collection, add me please
-
 });
